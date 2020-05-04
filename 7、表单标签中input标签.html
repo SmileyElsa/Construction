@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签，input标签</title>
+</head>
+<body>
+<!--表单是专门用来收集用户信息的,表单的标签叫做表元素-->
+<form action="http://www.baidu.com">
+<!--给表单添加边框fieldset标签,legend(解释、说明）标签标识边框的标题-->
+    <fieldset>
+        <legend>表单fieldset:legend</legend>
+    <!--region input标签 -->
+    input标签系列<br>
+    1、输入框没有默认值：
+    <!--明文输入框-->
+    <input type="text" >
+    <!--暗文输入框-->
+    <input type="password" >
+    <br>
+
+
+    2、输入框含有默认值：
+    <!--value属性填写控件中的默认值,name属性用来告诉服务器传哪些数据,传送有name属性的数据-->
+    <input type="text" value="elsa" name="admin">
+    <input type="password" value="1" name="pwd">
+    <br>
+
+    3、文字按钮：
+    <input type="button" >
+    <input type="button" value="提交按钮">
+    <br>
+
+    4、图片按钮：
+    <input type="image" src="images/lufeistand.jpg" height="20px" >
+    <br>
+
+    5、单选框可多选：
+    <input type="radio" name="gender">男
+    <input type="radio" name="gender">女
+    <input type="radio" name="gender">保密<br>
+    <br>
+    6、单选框不可多选：
+    <input type="radio" name="only" value="男">男
+    <input type="radio" name="only" value="女">女
+    <input type="radio" name="only" checked="checked" value="保密">保密<br>
+    <br>
+
+    7、多选框：
+    <input type="checkbox">篮球
+    <input type="checkbox">足球
+    <input type="checkbox">乒乓球
+    <br>
+    8、重置按钮:
+    <input type="reset" value="清空重置">
+    <br>
+
+    9、提交按钮:
+    <!--将表单中的数据提交到远程服务器，前提：1、告诉表单需要提交那个服务器，action属性。2、告诉表单哪些数据提交，name属性-->
+    <input type="submit" value="提交">
+    <br>
+    10、隐藏标签:
+    <input type="hidden" value="666" name="hide">
+    <br>
+    11、文字与文本框绑定，点击文本聚焦输入框:<br>
+    <!--1、将文本用label标签包裹起来；2、给输入框添加一个id；3、利用label标签的for属性，与输入框id关联-->
+    <label for="admin">用户名：</label>
+    <input type="text" id="admin">
+    <label for="pwd">密码：</label>
+    <input type="password" id="pwd">
+    <br>
+    12、文本框输入部分内容后推荐一个清单列表供选择。<br>
+    请输入你的车型：<input type="text" list="cars">
+    <datalist id="cars">
+        <option>奔驰</option>
+        <option>宝马</option>
+        <option>奥迪</option>
+        <option>路虎</option>
+    </datalist><br>
+
+    13、自动校验是否是邮箱格式：<input type="email"><br>
+
+    14、自动校验是否是URL格式：<input type="url"><br>
+
+    15、文本框只能输入数字：<input type="number"><br>
+
+    16、通过日历选择时间：<input type="date"><br>
+
+    17、通过取色板选择颜色：<input type="color"><br>
+    <!--endregion-->
+    <hr color="blue">
+    <hr color="blue">
+    <!--region 非input标签-->
+<!--下拉别表不能输入内容，可以直接在列表中选择内容。通过selected属性设置默认值。通过optgroup标签设置下拉列表分类-->
+     非input标签系列：<br>
+    1、下拉列表：
+    <select name="" id="">
+        <optgroup label="北京">
+            <option selected="selected" >朝阳区</option>
+            <option >昌平区</option>
+            <option >通州区</option>
+        </optgroup>
+        <optgroup label="广州">
+            <option>天河区</option>
+            <option>越秀区</option>
+            <option>黄浦区</option>
+        </optgroup>
+    </select>
+    <br>
+    2、多行输入框：
+    <textarea name=""  cols="30" rows="10">
+
+    </textarea>
+    </fieldset>
+    <!--endregion-->
+</form>
+</body>
+</html>
